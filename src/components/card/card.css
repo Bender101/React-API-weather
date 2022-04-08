@@ -1,0 +1,47 @@
+
+
+.card {
+  width: 200px;
+  height: fit-content;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #3a8ac0;
+  font-size: 14px;
+  color: #fff;
+  margin-left: 24px;
+  box-sizing: 3px 3px 12px 1px rgba(0, 0, 0, 0.25);
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.card__description {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.card__temperature {
+  margin-top: 12px;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.card__temperature::after {
+content: "° ";
+}
+
+.card__information {
+  margin-top: 12px;
+}
+
+.card__information > div {
+  margin-top: 4px;
+}
