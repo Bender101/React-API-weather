@@ -4,6 +4,7 @@ import { useWeather } from "../../hooks/useWeather";
 
 const Card = memo(({ city }) => {
   const data = useWeather(city)
+  
   if (!data) return null;
   const { name, weather, main } = data;
   const { description, icon } = weather[0];

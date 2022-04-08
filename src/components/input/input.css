@@ -1,4 +1,6 @@
 .input-wrapper {
+  /* width: 50vh; */
+  max-width: 50vh;
   display: flex;
   height: 50px;
   border-radius: 12px;
@@ -16,9 +18,21 @@
   border: none;
   outline: 0;
 }
+input::placeholder {
+  color: rgba(255, 255, 255, 0.523);
+}
 
 .button {
+  color: #fff;
+  border: 1px solid #0b8fe7;
+  background-color: #3baaf3;
   width: 20%;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
+}
+
+.button:active {
+  border: 1px solid #1a7cbd;
+  background-color: #1a7cbd;
+  box-shadow: 3px 3px 12px 1px rgba(0, 0, 0, 0.25);
 }

@@ -16,9 +16,9 @@ export default function Input({ setСities }) {
   };
   return (
     <div className="input-wrapper">
-      <input onChange={handleOnChange} className="input" value={inputValue} ref={inputRef} />
+      <input placeholder='Введите город' onChange={handleOnChange} className="input" value={inputValue} ref={inputRef} />
       <button className="button" onClick={handleOnClick}>
-        +
+        Узнать погоду
       </button>
     </div>
   );

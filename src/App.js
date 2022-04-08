@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="main">
       <Input setСities={setСities} />
-      <CardList cities={cities} />
+      <CardList setСities={setСities} cities={cities} />
     </div>
   );
 }
