@@ -43,6 +43,10 @@ export default function Input() {
   };
 
   return (
+    <>
+    <div >
+      <img className="title-logo" width={"335px"} src={"./title.png"} />
+    </div>
     <div className="input-wrapper">
       <input
         placeholder="Введите город"
@@ -61,5 +65,6 @@ export default function Input() {
         </button>
       )}
     </div>
+    </>
   );
 }

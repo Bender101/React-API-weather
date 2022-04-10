@@ -15,9 +15,9 @@ export default function CardList() {
     sortedCities.reverse();
   }
 
- const changeHandler = (e) => {
-   setOrder(e.target.value)
- }
+  const changeHandler = (e) => {
+    setOrder(e.target.value);
+  };
 
   return (
     <>
