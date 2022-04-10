@@ -19,6 +19,7 @@
   outline: 0;
 }
 input::placeholder {
+  font-size: 0.8em;
   color: rgba(255, 255, 255, 0.523);
 }
 

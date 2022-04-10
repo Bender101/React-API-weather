@@ -21,10 +21,9 @@ export default function CardList() {
 
   return (
     <>
-    <label for="select">Сортировать</label>
       <select className="select" value={order} onChange={changeHandler}>
-        <option value="asc">Имя ↑</option>
-        <option value="desc">Имя ↓</option>
+        <option value="asc">Название ↑</option>
+        <option value="desc">Название ↓</option>
       </select>
       <div className="card-list">
         {sortedCities?.map((city) => (
