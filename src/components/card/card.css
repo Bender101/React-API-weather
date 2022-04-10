@@ -11,6 +11,20 @@
   box-shadow: 3px 3px 12px 1px rgba(0, 0, 0, 0.294);
 }
 
+.card:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+
 .action-button-wrap {
   display: flex;
   justify-content: flex-end;
@@ -18,8 +32,26 @@
 
 .action-button {
   background: #fff;
-  border: 1px solid #000
+  margin-left: 2px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
+
+.action-button:active {
+  background: rgb(173, 162, 162);
+  margin-left: 2px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
 .card__info {
   display: flex;
   flex-direction: column;

@@ -30,10 +30,10 @@ const Card = memo(({ city }) => {
     <div className="card">
       <div className="action-button-wrap">
         <button className="action-button" onClick={editHandler}>
-          Edit
+        ✐
         </button>
         <button className="action-button" onClick={deleteHandler}>
-          X
+        ✖
         </button>
       </div>
       <div className="card__info">
