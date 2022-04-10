@@ -1,5 +1,3 @@
-
-
 .card {
   width: 200px;
   height: fit-content;
@@ -13,6 +11,15 @@
   box-shadow: 3px 3px 12px 1px rgba(0, 0, 0, 0.294);
 }
 
+.action-button-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.action-button {
+  background: #fff;
+  border: 1px solid #000
+}
 .card__info {
   display: flex;
   flex-direction: column;
@@ -36,7 +43,7 @@
 }
 
 .card__temperature::after {
-content: "° ";
+  content: "° ";
 }
 
 .card__information {

@@ -1,17 +1,39 @@
 import "./card.css";
-import React, { memo} from "react";
+import React, { memo } from "react";
 import { useWeather } from "../../hooks/useWeather";
 
-const Card = memo(({ city }) => {
-  const data = useWeather(city)
-  
+const Card = memo(({ city, dispatch }) => {
+  const data = useWeather(city);
+
   if (!data) return null;
   const { name, weather, main } = data;
   const { description, icon } = weather[0];
   const { temp, humidity, feels_like } = main;
-  
+
+  const deleteHandler = () => {
+    dispatch({
+      type: "DELETE_CITY",
+      payload: city,
+    });
+  };
+
+  const editHandler = () => {
+    dispatch({
+      type: "EDIT_CITY",
+      payload: city,
+    });
+  };
+
   return (
     <div className="card">
+      <div className="action-button-wrap">
+        <button className="action-button" onClick={editHandler}>
+          Edit
+        </button>
+        <button className="action-button" onClick={deleteHandler}>
+          X
+        </button>
+      </div>
       <div className="card__info">
         <img
           className="card__icon"
@@ -28,5 +50,5 @@ const Card = memo(({ city }) => {
       </div>
     </div>
   );
-})
-export default Card
+});
+export default Card;
