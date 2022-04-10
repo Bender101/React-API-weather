@@ -1,17 +1,21 @@
 import "./App.css";
 import "./components/card/card.css";
+import React from "react";
 import Input from "./components/input/input";
 import CardList from "./components/cardList/cardList";
 import { useCities } from "./hooks/useCities";
 
+export const Context = React.createContext();
+
 function App() {
   const [state, dispatch] = useCities();
-  const { inputValue, cities, editingCity } = state;
   return (
-    <div className="main">
-      <Input dispatch={dispatch} inputValue={inputValue} editingCity={editingCity}/>
-      <CardList dispatch={dispatch} cities={cities} />
-    </div>
+    <Context.Provider value={{ state, dispatch }}>
+      <div className="main">
+        <Input />
+        <CardList />
+      </div>
+    </Context.Provider>
   );
 }
 

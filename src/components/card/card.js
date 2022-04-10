@@ -1,9 +1,11 @@
 import "./card.css";
-import React, { memo } from "react";
+import React, { memo, useContext } from "react";
 import { useWeather } from "../../hooks/useWeather";
+import { Context } from "../../App";
 
-const Card = memo(({ city, dispatch }) => {
+const Card = memo(({ city }) => {
   const data = useWeather(city);
+  const { dispatch } = useContext(Context);
 
   if (!data) return null;
   const { name, weather, main } = data;

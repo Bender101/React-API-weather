@@ -1,8 +1,13 @@
 import "./input.css";
-import { useRef } from "react";
+import { useRef, useContext } from "react";
+import { Context } from "../../App";
 
-export default function Input({ dispatch, inputValue, editingCity }) {
+export default function Input() {
   const inputRef = useRef(null);
+  const {
+    dispatch,
+    state: { inputValue, editingCity },
+  } = useContext(Context);
 
   const handleOnAdd = (e) => {
     if (inputValue.length) {
@@ -36,7 +41,7 @@ export default function Input({ dispatch, inputValue, editingCity }) {
       payload: e.target.value,
     });
   };
-  
+
   return (
     <div className="input-wrapper">
       <input
