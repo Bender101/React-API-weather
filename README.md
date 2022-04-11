@@ -1,4 +1,4 @@
-### Weather
+# Weather
 * Введи город - получи погодку
 * Работа с API - https://openweathermap.org/api
 * Добавление
